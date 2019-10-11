@@ -17,7 +17,7 @@ export const Nav = () => {
                     <Icon type="highlight" theme="filled" />
                     Note app
                 </Col>
-                <Col className="Nav-items" xs={12} md={12} lg={16} xl={14}>
+                <Col className="Nav-items" xs={{span: 4, offset: 8}} md={{span: 12, offset: 0}} lg={16} xl={{span: 14, offset: 2}}>
                     <Menu style={{ border: 0, background: 'none' }} className='Nav-items' onClick={handleClick}
                           selectedKeys={[current]} mode="horizontal">
                         <Menu.Item key="home">

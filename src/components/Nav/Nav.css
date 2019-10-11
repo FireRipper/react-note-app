@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Acme|Kurale&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Acme|Roboto&display=swap');
 
 .Nav {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
     padding: 5px 0;
+    margin-bottom: 10px;
 }
 
 .Nav .Nav-logo {
@@ -21,6 +22,6 @@
 
 .Nav .Nav-items {
     font-size: calc((100vw - 480px) / (1280 - 480) * (16 - 12) + 16px);
-    font-family: 'Kurale', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
 }
