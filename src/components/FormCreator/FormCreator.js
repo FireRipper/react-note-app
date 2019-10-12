@@ -15,7 +15,6 @@ export const FormCreator = () => {
             setValue('')
         } else {
             alert.show('Введите название заметки!')
-
         }
     }
 
