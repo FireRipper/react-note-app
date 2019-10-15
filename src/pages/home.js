@@ -1,4 +1,4 @@
-import React, {Fragment, useContext, useEffect} from 'react'
+import React, { Fragment, useContext, useEffect } from 'react'
 import { Notes } from '../components/Notes/Notes'
 import { FormCreator } from '../components/FormCreator/FormCreator'
 import { AlertCreator } from '../components/AlertCreator/AlertCreator'
@@ -6,7 +6,8 @@ import { FirebaseContext } from '../context/firebase/firebaseContext'
 import { Loader } from '../components/Loader/Loader'
 
 export const Home = () => {
-    const {loading, notes, fetchNotes} = useContext(FirebaseContext)
+
+    const {loading, notes, fetchNotes, removeNote} = useContext(FirebaseContext)
 
     useEffect(() => {
         fetchNotes()
@@ -20,7 +21,7 @@ export const Home = () => {
 
             {loading
             ? <Loader />
-            : <Notes/> }
+            : <Notes notes={notes} onRemove={removeNote} /> }
         </Fragment>
     )
 }
