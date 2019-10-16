@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { message } from 'antd'
 import React, { useReducer } from 'react'
 import { FirebaseContext } from './firebaseContext'
 import { firebaseReducer } from './firebaseReducer'
@@ -11,18 +12,19 @@ export const FirebaseState = ({ children }) => {
         notes: [],
         loading: false
     }
-
     const [state, dispatch] = useReducer(firebaseReducer, initialState)
 
     const showLoader = () => dispatch({ type: SHOW_LOADER })
-    const hideLoader =() => dispatch({ type: HIDE_LOADER })
-
+    const hideLoader = () => dispatch({ type: HIDE_LOADER })
+    const deleteMessage = () => {
+        message.success('Заметка успешно удалена!', 5)
+    }
 
     const fetchNotes = async () => {
         showLoader()
         const res = await axios.get(`${url}/notes.json`)
 
-        if(!res.data) {
+        if (!res.data) {
             hideLoader()
         } else {
             const payload = Object.keys(res.data).map(key => {
@@ -40,10 +42,10 @@ export const FirebaseState = ({ children }) => {
     }
 
     const addNote = async title => {
+
         const note = {
             title, date: new Date().toJSON()
         }
-
         try {
             const res = await axios.post(`${url}/notes.json`, note)
             const payload = {
@@ -58,6 +60,7 @@ export const FirebaseState = ({ children }) => {
         } catch (e) {
             throw new Error(e.message)
         }
+
     }
 
     const removeNote = async id => {
@@ -65,10 +68,9 @@ export const FirebaseState = ({ children }) => {
 
         dispatch({
             type: REMOVE_NOTE,
-            payload: id,
+            payload: id
         })
-
-        hideLoader()
+        deleteMessage()
     }
 
     return (

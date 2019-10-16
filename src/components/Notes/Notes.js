@@ -1,6 +1,7 @@
 import './Notes.css'
 import React from 'react'
-import { List, Col, Button, Icon } from 'antd'
+import { List, Col, Icon } from 'antd'
+import { TooltipCreator } from '../TooltipCreator/TooltipCreator'
 
 export const Notes = ({ notes, onRemove }) => (
     <Col xs={23} sm={23} md={{ span: 14, offset: 10, pull: 5 }}>
@@ -24,15 +25,22 @@ export const Notes = ({ notes, onRemove }) => (
                             <strong>{note.title}</strong>&nbsp;
                             <small>{note.date}</small>
                         </div>
-                        <Button
-                            type='danger'
-                            size='small'
-                            onClick={() => onRemove(note.id)}
-                        ><Icon type="delete" theme="filled" /></Button>
+                        <div>
+                            {TooltipCreator(
+                                'Редактировать',
+                                'primary',
+                                'edit', 'left',
+                                'filled','Notes-btn')}
+                            {TooltipCreator(
+                                'Удалить заметку',
+                                'danger','delete',
+                                'rightTop', 'filled',
+                                '',
+                                () => onRemove(note.id))}
+                        </div>
                     </List.Item>
                 ))}
             </List>
         }
-
     </Col>
 )
