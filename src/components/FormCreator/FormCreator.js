@@ -25,7 +25,7 @@ export const FormCreator = () => {
     }
 
     return (
-        <Col xs={23} sm={23} md={{ span: 14, offset: 10, pull: 5 }} className='FormCreator'>
+        <Col xs={23} sm={23} md={23} lg={{ span: 14, offset: 10, pull: 5 }} className='FormCreator'>
             <form onSubmit={submitHandler}>
                 <Input
                     placeholder='Введите название заметки'

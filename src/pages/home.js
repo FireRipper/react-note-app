@@ -19,9 +19,9 @@ export const Home = () => {
             <AlertCreator/>
             <FormCreator />
 
-            {loading
+            { loading
             ? <Loader />
-            : <Notes notes={notes} onRemove={removeNote}/> }
+            : <Notes notes={notes} onRemove={removeNote} /> }
         </Fragment>
     )
 }

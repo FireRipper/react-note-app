@@ -4,7 +4,7 @@ import { List, Col, Icon } from 'antd'
 import { TooltipCreator } from '../TooltipCreator/TooltipCreator'
 
 export const Notes = ({ notes, onRemove }) => (
-    <Col xs={23} sm={23} md={{ span: 14, offset: 10, pull: 5 }}>
+    <Col xs={23} sm={23} md={23} lg={{ span: 14, offset: 10, pull: 5 }}>
         {notes.length === 0
             ? <List
                 size="middle"

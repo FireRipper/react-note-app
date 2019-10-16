@@ -1,8 +1,8 @@
 import React from 'react'
 import { Button, Icon, Tooltip } from 'antd'
 
-export const TooltipCreator = (titleTooltip, typeButton, typeIcon, placeTooltip, themeIcon, clsButton, funcClickBtn) => {
-    return (<Tooltip placement={placeTooltip} title={titleTooltip}>
+export const TooltipCreator = (titleTooltip, typeButton, typeIcon, placeTooltip, themeIcon, clsButton, funcClickBtn) =>
+    <Tooltip placement={placeTooltip} title={titleTooltip}>
         <Button
             type={typeButton}
             size='small'
@@ -11,7 +11,7 @@ export const TooltipCreator = (titleTooltip, typeButton, typeIcon, placeTooltip,
         >
             <Icon type={typeIcon} theme={themeIcon} />
         </Button>
-    </Tooltip>)
-}
+    </Tooltip>
+
 
 

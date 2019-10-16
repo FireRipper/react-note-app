@@ -7,6 +7,7 @@ import { Nav } from './components/Nav/Nav'
 import { AlertState } from './context/alert/AlertState'
 import { Switch, BrowserRouter, Route } from 'react-router-dom'
 import { FirebaseState } from './context/firebase/FirebaseState'
+import { Footer } from './components/Footer/Footer'
 
 function App() {
     return (
@@ -14,12 +15,15 @@ function App() {
             <AlertState>
                 <BrowserRouter>
                     <Nav />
-                    <Row type='flex' justify='center'>
-                        <Switch>
-                            <Route path={'/'} exact component={Home} />
-                            <Route path={'/about'} component={About} />
-                        </Switch>
-                    </Row>
+                    <div className='App'>
+                        <Row type='flex' justify='center'>
+                            <Switch>
+                                <Route path={'/'} exact component={Home} />
+                                <Route path={'/about'} component={About} />
+                            </Switch>
+                        </Row>
+                    </div>
+                    <Footer />
                 </BrowserRouter>
             </AlertState>
         </FirebaseState>
