@@ -1,6 +1,7 @@
 import './Notes.css'
 import React from 'react'
 import { List, Col, Icon } from 'antd'
+import { convertDate } from '../../functions/convertDate'
 import { TooltipCreator } from '../TooltipCreator/TooltipCreator'
 
 export const Notes = ({ notes, onRemove }) => (
@@ -23,17 +24,17 @@ export const Notes = ({ notes, onRemove }) => (
                         <div>
                             <Icon type="flag" theme="twoTone" twoToneColor="#eb2f96" />&nbsp;
                             <strong>{note.title}</strong>&nbsp;
-                            <small>{note.date}</small>
+                            <small>{convertDate(note.date)}</small>
                         </div>
                         <div>
                             {TooltipCreator(
                                 'Редактировать',
                                 'primary',
                                 'edit', 'left',
-                                'filled','Notes-btn')}
+                                'filled', 'Notes-btn')}
                             {TooltipCreator(
                                 'Удалить заметку',
-                                'danger','delete',
+                                'danger', 'delete',
                                 'rightTop', 'filled',
                                 '',
                                 () => onRemove(note.id))}
