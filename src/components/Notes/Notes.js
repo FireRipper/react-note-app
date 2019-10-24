@@ -1,8 +1,10 @@
 import './Notes.css'
-import React from 'react'
+import React, { useContext } from 'react'
 import { List, Col, Icon } from 'antd'
 import { convertDate } from '../../functions/convertDate'
 import { TooltipCreator } from '../TooltipCreator/TooltipCreator'
+import { ModalContext } from '../../context/modal/modalContext'
+
 
 export const Notes = ({ notes, onRemove, onShow }) => (
     <Col xs={23} sm={23} md={23} lg={{ span: 14, offset: 10, pull: 5 }}>
@@ -45,3 +47,4 @@ export const Notes = ({ notes, onRemove, onShow }) => (
         }
     </Col>
 )
+
