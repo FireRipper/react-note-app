@@ -1,5 +1,6 @@
 import { Notes } from '../components/Notes/Notes'
 import { Loader } from '../components/Loader/Loader'
+import { ModalForm } from '../components/ModalForm/ModalForm'
 import React, { Fragment, useContext, useEffect } from 'react'
 import { FormCreator } from '../components/FormCreator/FormCreator'
 import { AlertCreator } from '../components/AlertCreator/AlertCreator'
@@ -18,6 +19,7 @@ export const Home = () => {
         <Fragment>
             <AlertCreator/>
             <FormCreator />
+            <ModalForm />
 
             { loading
             ? <Loader />

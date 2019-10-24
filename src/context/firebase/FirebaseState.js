@@ -63,6 +63,10 @@ export const FirebaseState = ({ children }) => {
 
     }
 
+    const editNote = async id => {
+        await axios.put(`${url}/notes/${id}.json`)
+    }
+
     const removeNote = async id => {
         await axios.delete(`${url}/notes/${id}.json`)
 
@@ -75,7 +79,8 @@ export const FirebaseState = ({ children }) => {
 
     return (
         <FirebaseContext.Provider value={{
-            showLoader, fetchNotes, addNote, removeNote,
+            showLoader, fetchNotes, addNote,
+            removeNote, editNote,
             loading: state.loading,
             notes: state.notes
         }}>
