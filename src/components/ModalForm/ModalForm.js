@@ -1,5 +1,6 @@
 import { Modal } from 'antd'
 import React, { useContext } from 'react'
+import { FormEdit } from '../FormEdit/FormEdit'
 import { ModalContext } from '../../context/modal/modalContext'
 
 export const ModalForm = () => {
@@ -18,7 +19,7 @@ export const ModalForm = () => {
             onCancel={hideModal}
             onOk={hideModal}
         >
-            Some content
+            <FormEdit />
         </Modal>
     )
 }

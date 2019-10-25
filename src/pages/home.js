@@ -23,9 +23,11 @@ export const Home = () => {
             <FormCreator />
             <ModalForm />
 
-            {loading
-                ? <Loader />
-                : <Notes notes={notes} onRemove={removeNote} onShow={showModal} />}
+            {
+                loading
+                    ? <Loader />
+                    : <Notes notes={notes} onRemove={removeNote} onShow={showModal} />
+            }
         </Fragment>
     )
 }

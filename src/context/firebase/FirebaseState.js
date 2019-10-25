@@ -12,12 +12,13 @@ export const FirebaseState = ({ children }) => {
         notes: [],
         loading: false
     }
+
     const [state, dispatch] = useReducer(firebaseReducer, initialState)
 
     const showLoader = () => dispatch({ type: SHOW_LOADER })
     const hideLoader = () => dispatch({ type: HIDE_LOADER })
     const deleteMessage = () => {
-        message.success('Заметка успешно удалена!', 5)
+        message.success('Заметка успешно удалена!', 2)
     }
 
     const fetchNotes = async () => {
