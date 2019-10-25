@@ -4,6 +4,9 @@ import { Col, Row, Menu, Icon } from 'antd'
 import { NavLink } from 'react-router-dom'
 
 export const Nav = () => {
+    const currentPage = window.location.pathname
+
+    // eslint-disable-next-line
     const [current, setCurrent] = useState('home')
 
     const handleClick = e => {
@@ -17,13 +20,15 @@ export const Nav = () => {
                     <Icon type="highlight" theme="filled" />
                     Note app
                 </Col>
-                <Col className="Nav-items" xs={{span: 4, offset: 8}} md={{span: 12, offset: 0}} lg={16} xl={{span: 14, offset: 2}}>
-                    <Menu style={{ border: 0, background: 'none' }} className='Nav-items' onClick={handleClick}
-                          selectedKeys={[current]} mode="horizontal">
-                        <Menu.Item key="home">
+                <Col className="Nav-items" xs={{ span: 4, offset: 8 }} md={{ span: 12, offset: 0 }} lg={16}
+                     xl={{ span: 14, offset: 2 }}>
+                    <Menu style={{ border: 0, background: 'none' }} className='Nav-items'
+                          onClick={handleClick}
+                          mode="horizontal">
+                        <Menu.Item key="home" className={ currentPage === '/' ? 'ant-menu-item-selected' : ''}>
                             <NavLink to='/' exact>Главная</NavLink>
                         </Menu.Item>
-                        <Menu.Item key="about">
+                        <Menu.Item key="about" className={ currentPage === '/about' ? 'ant-menu-item-selected' : ''}>
                             <NavLink to='/about'>Информация</NavLink>
                         </Menu.Item>
                     </Menu>
