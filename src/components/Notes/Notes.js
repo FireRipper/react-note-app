@@ -17,7 +17,8 @@ export const Notes = ({ notes, onRemove, onShow }) => (
                 header={<div>Мои заметки</div>}
                 bordered
                 pagination={{
-                    pageSize: 5
+                    pageSize: 5,
+                    size: 'small'
                 }}
                 dataSource={notes}
                 renderItem={item => (
@@ -25,7 +26,7 @@ export const Notes = ({ notes, onRemove, onShow }) => (
                         className='Notes-li'
                         key={item.id}>
                         <div>
-                            <Icon type="flag" theme="twoTone" twoToneColor="#eb2f96" />&nbsp;
+                            <Icon type="pushpin"  theme="twoTone" twoToneColor="#eb2f96" />&nbsp;
                             <strong>{item.title}</strong>&nbsp;
                             <small>{convertDate(item.date)}</small>
                         </div>

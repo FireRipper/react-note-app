@@ -22,7 +22,11 @@
 }
 
 .Nav .Nav-items {
-    font-size: calc((100vw - 480px) / (1280 - 480) * (16 - 12) + 16px);
+    font-size: calc((100vw - 480px) / (1280 - 480) * (16 - 14) + 16px) !important;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
+}
+
+.Nav .Nav-items .Nav-icon {
+    font-size: calc((100vw - 480px) / (1280 - 480) * (16 - 14) + 16px) !important;
 }

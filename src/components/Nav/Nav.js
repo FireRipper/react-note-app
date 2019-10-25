@@ -26,10 +26,10 @@ export const Nav = () => {
                           onClick={handleClick}
                           mode="horizontal">
                         <Menu.Item key="home" className={ currentPage === '/' ? 'ant-menu-item-selected' : ''}>
-                            <NavLink to='/' exact>Главная</NavLink>
+                            <NavLink to='/' exact><Icon type="home" className='Nav-icon'/>Главная</NavLink>
                         </Menu.Item>
                         <Menu.Item key="about" className={ currentPage === '/about' ? 'ant-menu-item-selected' : ''}>
-                            <NavLink to='/about'>Информация</NavLink>
+                            <NavLink to='/about'><Icon type="exclamation-circle" className='Nav-icon' />Информация</NavLink>
                         </Menu.Item>
                     </Menu>
                 </Col>
