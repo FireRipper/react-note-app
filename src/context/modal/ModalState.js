@@ -6,8 +6,16 @@ import { SHOW_MODAL, HIDE_MODAL } from '../types'
 export const ModalState = ({ children }) => {
     const [state, dispatch] = useReducer(modalReducer, { visible: false })
 
-    const showModal = () => {
-        dispatch({ type: SHOW_MODAL })
+    const showModal = (idNote, titleNote) => {
+
+        const payload = {idNote, titleNote}
+
+        console.log(
+            'id ', idNote, 'title ', titleNote)
+        dispatch({
+            type: SHOW_MODAL,
+            payload
+        })
     }
 
     const hideModal = () => {

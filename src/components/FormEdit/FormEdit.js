@@ -1,22 +1,13 @@
 import React from 'react'
-import { Form, Input } from 'antd'
+import { Icon, Input } from 'antd'
 
-export const FormEdit = Form.create({name: 'form_edit'}) (
-    // eslint-disable-next-line
-    class extends React.Component{
-        render() {
-            const {form} = this.props
-            const {getFieldDecorator} = form
-
-            return(
-                <Form layout='vertical'>
-                    <Form.Item label="Заметка">
-                        {getFieldDecorator('title', {
-                            rules: [{ required: true, message: 'Данное поле нужно заполнить' }],
-                        })(<Input />)}
-                    </Form.Item>
-                </Form>
-            )
-        }
-    }
+export const FormEdit = (/*{idNote = '-Ls1zknjbXaeOgZUdcwN', titleNote = 'Сходить на концерт 18.11.19 Stereo Plaza 19.00'}*/) => (
+    <form>
+        <Input placeholder="Введите название заметки..."
+               allowClear
+               prefix={<Icon type="pushpin" style={{ color: 'rgba(0,0,0,.25)' }} />}
+             /*  id={idNote}
+               defaultValue={titleNote}*/
+        />
+    </form>
 )

@@ -2,7 +2,8 @@ import './Notes.css'
 import React from 'react'
 import { List, Col, Icon } from 'antd'
 import { convertDate } from '../../functions/convertDate'
-import { TooltipCreator } from '../TooltipCreator/TooltipCreator'
+import { TooltipPrimary } from '../TooltipButtons/TooltipPrimary'
+import { TooltipDanger } from '../TooltipButtons/TooltipDanger'
 
 export const Notes = ({ notes, onRemove, onShow }) => (
     <Col xs={23} sm={23} md={23} lg={{ span: 14, offset: 10, pull: 5 }}>
@@ -31,17 +32,8 @@ export const Notes = ({ notes, onRemove, onShow }) => (
                             <small>{convertDate(item.date)}</small>
                         </div>
                         <div>
-                            {TooltipCreator(
-                                'Редактировать',
-                                'primary',
-                                'edit', 'left',
-                                'filled', 'Notes-btn', onShow
-                            )}
-                            {TooltipCreator(
-                                'Удалить заметку',
-                                'danger', 'delete',
-                                'rightTop', 'filled',
-                                '', () => onRemove(item.id))}
+                            {TooltipPrimary('заметку','Notes-btn',() => onShow(item.id, item.title))}
+                            {TooltipDanger('заметку','',() => onRemove(item.id))}
                         </div>
                     </List.Item>
                 )}

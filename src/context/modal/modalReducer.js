@@ -1,7 +1,9 @@
 import {HIDE_MODAL, SHOW_MODAL} from '../types'
 
 const handlers = {
-    [SHOW_MODAL] : (state) => ({...state, visible: true}),
+    [SHOW_MODAL] : (state, {payload}) => ({
+        ...state, payload,
+        visible: true}),
     [HIDE_MODAL] : (state) => ({...state, visible: false}),
     DEFAULT: state => state
 }
