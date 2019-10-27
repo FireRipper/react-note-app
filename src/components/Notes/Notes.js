@@ -2,8 +2,8 @@ import './Notes.css'
 import React from 'react'
 import { List, Col, Icon } from 'antd'
 import { convertDate } from '../../functions/convertDate'
-import { TooltipPrimary } from '../TooltipButtons/TooltipPrimary'
 import { TooltipDanger } from '../TooltipButtons/TooltipDanger'
+import { TooltipPrimary } from '../TooltipButtons/TooltipPrimary'
 
 export const Notes = ({ notes, onRemove, onShow }) => (
     <Col xs={23} sm={23} md={23} lg={{ span: 14, offset: 10, pull: 5 }}>
@@ -21,6 +21,7 @@ export const Notes = ({ notes, onRemove, onShow }) => (
                     pageSize: 5,
                     size: 'small'
                 }}
+                className='Notes-list'
                 dataSource={notes}
                 renderItem={item => (
                     <List.Item

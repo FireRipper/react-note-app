@@ -1,0 +1,40 @@
+.about {
+    border-radius: 10px;
+    border: 1px solid #cfd4dd;
+    padding: 20px;
+    text-align: center;
+}
+
+.about .about-card {
+    border-radius: 10px;
+    background: #096dd9;
+    padding: 15px 0;
+}
+
+.about .about-card .about-icon {
+    display: inline-block;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 9) + 16px) !important;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background: #fff;
+
+}
+
+.about .about-card .about-icon-color-blue{
+    color: #1890ff;
+}
+
+.about .about-card .about-icon-color-red{
+    color: #ff4d4f;
+}
+
+.about .about-description {
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (16 - 15) + 15px);
+    color: #e8e8e8;
+}
+
+.about .about-title {
+    color: #fff;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 17px);
+}

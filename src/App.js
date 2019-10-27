@@ -7,7 +7,7 @@ import { Nav } from './components/Nav/Nav'
 import { Footer } from './components/Footer/Footer'
 import { AlertState } from './context/alert/AlertState'
 import { ModalState } from './context/modal/ModalState'
-import { Switch, BrowserRouter, Route } from 'react-router-dom'
+import { Switch, BrowserRouter, Route, Redirect } from 'react-router-dom'
 import { FirebaseState } from './context/firebase/FirebaseState'
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
                                 <Switch>
                                     <Route path={'/'} exact component={Home} />
                                     <Route path={'/about'} component={About} />
+                                    <Redirect to={'/'}/>
                                 </Switch>
                             </Row>
                         </div>

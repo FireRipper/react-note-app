@@ -3,7 +3,7 @@
 .Nav {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
     padding: 5px 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     flex-shrink: 0;
 }
 
