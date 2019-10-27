@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Acme|Roboto&display=swap');
+
+.Nav {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+    padding: 5px 0;
+    margin-bottom: 5px;
+    flex-shrink: 0;
+}
+
+.Nav .Nav-logo {
+    text-align: center;
+    color: #006d75;
+    font-size: calc((100vw - 480px) / (1280 - 480) * (26 - 16) + 20px);
+    font-weight: bold;
+    font-family: 'Acme', sans-serif;
+    transition: opacity 3s;
+}
+
+.Nav .Nav-logo:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
+.Nav .Nav-items {
+    font-size: calc((100vw - 480px) / (1280 - 480) * (16 - 14) + 16px) !important;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.Nav .Nav-items .Nav-icon {
+    font-size: calc((100vw - 480px) / (1280 - 480) * (16 - 14) + 16px) !important;
+}

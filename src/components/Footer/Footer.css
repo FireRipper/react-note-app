@@ -1,0 +1,10 @@
+.Footer {
+    flex-shrink: 0;
+}
+
+.Footer .Footer-divider {
+    color: #006d75 !important;
+    font-size: calc((100vw - 480px) / (1280 - 480) * (18 - 16) + 16px) !important;
+    font-weight: bold;
+    font-family: 'Acme', sans-serif;
+}

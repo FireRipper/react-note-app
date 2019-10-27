@@ -1,0 +1,12 @@
+.Notes-list {
+}
+
+.Notes-li {
+    display: flex !important;
+    justify-content: space-between !important;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (20 - 18) + 14px);
+}
+
+.Notes-li .Notes-btn {
+    margin-right: 5px;
+}
