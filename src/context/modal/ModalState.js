@@ -10,8 +10,6 @@ export const ModalState = ({ children }) => {
 
         const payload = {idNote, titleNote}
 
-        console.log(
-            'id ', idNote, 'title ', titleNote)
         dispatch({
             type: SHOW_MODAL,
             payload
