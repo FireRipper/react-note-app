@@ -2,28 +2,15 @@ import React from 'react'
 import { Button, Icon, Tooltip } from 'antd'
 
 export const TooltipDanger = (textTooltip, clsButton, funcClickBtn) => {
-    const TooltipDanger = {
-        placeTooltip: 'rightTop' || 'left',
-        titleTooltip: `Удалить ${textTooltip}`,
-        dangerBtn: {
-            type: 'danger',
-            clsButton: clsButton || '',
-        },
-        dangerIcon: {
-            typeIcon: 'delete',
-            themeIcon: 'filled'
-        }
-    }
-
     return (
-        <Tooltip placement={TooltipDanger.placeTooltip} title={TooltipDanger.titleTooltip}>
+        <Tooltip placement='rightTop' title={`Удалить ${textTooltip}`}>
             <Button
                 size='small'
-                type={TooltipDanger.dangerBtn.type}
-                className={TooltipDanger.dangerBtn.clsButton}
+                type='danger'
+                className={clsButton}
                 onClick={funcClickBtn}
             >
-                <Icon type={TooltipDanger.dangerIcon.typeIcon} theme={TooltipDanger.dangerIcon.themeIcon} />
+                <Icon type='delete' theme='filled' />
             </Button>
         </Tooltip>
     )
